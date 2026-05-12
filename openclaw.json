@@ -1,0 +1,79 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/rk/.openclaw/workspace",
+      "models": {
+        "openrouter/auto": {
+          "alias": "OpenRouter"
+        },
+        "openrouter/meta-llama/llama-3.3-70b-instruct:free": {},
+	"openrouter/z-ai/glm-4.5-air:free": {}
+      },
+      "model": {
+        "primary": "openrouter/z-ai/glm-4.5-air:free"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "99e7f3babbfd38adac10d7d207653cd36e545b1dcebdc6b7"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send",
+        "sms.search"
+      ]
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "auth": {
+    "profiles": {
+      "openrouter:default": {
+        "provider": "openrouter",
+        "mode": "api_key"
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "selfChatMode": false,
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "enabled": true
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-05-06T13:54:08.401Z",
+    "lastRunVersion": "2026.4.2",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.2",
+    "lastTouchedAt": "2026-05-06T13:54:15.299Z"
+  }
+}

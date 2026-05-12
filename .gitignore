@@ -1,0 +1,19 @@
+# Credentials & secrets
+credentials/
+identity/
+devices/
+
+# Runtime data
+memory/
+logs/
+tasks/
+
+# Config backups & state
+openclaw.json.bak
+update-check.json
+exec-approvals.json
+canvas/
+completions/
+
+# Workspace internal state
+workspace/.openclaw/
